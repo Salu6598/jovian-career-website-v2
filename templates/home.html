@@ -7,19 +7,27 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<style>
 			#banner {
-				height: 360px;
+				height: 300px;
 				width: 100%;
 				object-fit: cover;
+				margin-bottom: 16px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container >
+		{% include 'nav.html' %}
 		<h1 class="text-center mt-4 mb-4">Jovian Careers</h1>
 		<img class="img-fluid" id="banner" src="https://jovian-careers-website-2.salmansalman29.repl.co/static/banner.avif">
+		<div class="container" >
 		<h2 class="text-center mt-4 mb-4">About Jovian</h2>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Aenean et tortor at risus viverra. Sed arcu non odio euismod lacinia. Massa sapien faucibus et molestie ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet est placerat in egestas erat. Dictumst vestibulum rhoncus est pellentesque elit. Fermentum leo vel orci porta non pulvinar neque. Sagittis eu volutpat odio facilisis.</p>
-	</body>
+		<div class="row" style="margin-bottom: 16px;">
+		<div class="col-md-6">
+		<p class="lead fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Aenean et tortor at risus viverra. Sed arcu non odio euismod lacinia. Massa sapien faucibus et molestie ac. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Sit amet est placerat in egestas erat. Dictumst vestibulum rhoncus est pellentesque elit. Fermentum leo vel orci porta non pulvinar neque. Sagittis eu volutpat odio facilisis.</p>
+		</div>
+		<div class="d-none d-md-block col-md-6">
+		<img src="/static/peoples.avif" style="height: 320px; border-radius: 4px;">
+		</div>
+		</div>
 	<h2 class="text-center mt-4 mb-4">Open Positions</h2>
 	<div>
 		{% for job in jobs %}
@@ -27,8 +35,9 @@
 		{% endfor %}
 	</div>
 	<div class="text-center">
-	<button class="btn btn-primary btn-lg">Contact Us</button>
-		<p class="mt-4">Copyright 2022, Jovian</p>
+	<a href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20queston%3A%20%3Center%20your%20question%3E" class="btn btn-primary btn-lg">Contact Us</a>
 	</div>
 </div>
+{% include 'footer.html' %}
+</body>
 </html>
